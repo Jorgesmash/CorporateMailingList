@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         AddressesDbManager.newInstance(this);
 
         toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(getString(R.string.app_alias));
         setSupportActionBar(toolbar);
 
         // Weekly weather section
