@@ -9,7 +9,7 @@ public final class AddressesDbContract {
 
     /* Inner class that defines the table contents */
     public static class FeedEntry implements BaseColumns {
-        public static final String TABLE_NAME = "addresses";
+        static final String TABLE_NAME = "addresses";
         public static final String COLUMN_NAME_LOCATION_NAME = "location_name";
         public static final String COLUMN_NAME_STREET_ADDRESS = "street_address";
         public static final String COLUMN_NAME_CITY = "city";

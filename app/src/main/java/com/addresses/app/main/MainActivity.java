@@ -47,16 +47,16 @@ public class MainActivity extends AppCompatActivity {
         // Create a singleton instance for AddressesDbManager
         AddressesDbManager.newInstance(this);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // Weekly weather section
-        addressListRecyclerView = (RecyclerView) findViewById(R.id.addressListRecyclerView);
+        addressListRecyclerView = findViewById(R.id.addressListRecyclerView);
         addressListRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        emptyTextView = (TextView) findViewById(R.id.emptyTextView);
+        emptyTextView = findViewById(R.id.emptyTextView);
 
-        addFloatingButton = (FloatingActionButton) findViewById(R.id.addFloatingButton);
+        addFloatingButton = findViewById(R.id.addFloatingButton);
         addFloatingButton.setOnClickListener(new AddFloatingButtonOnClickListener());
     }
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     private void populateAddresses(List addressList) {
 
         // Specify an adapter
-        addressRecyclerViewAdapter = new AddressRecyclerViewAdapter(this, addressList, new AddressListRecyclerViewOnItemClickListener());
+        addressRecyclerViewAdapter = new AddressRecyclerViewAdapter(addressList, new AddressListRecyclerViewOnItemClickListener());
         addressListRecyclerView.setAdapter(addressRecyclerViewAdapter);
     }
 

@@ -16,10 +16,10 @@ public class AddressesDbHelper extends SQLiteOpenHelper {
                     AddressesDbContract.FeedEntry.COLUMN_NAME_ZIP + " TEXT)";
 
     // If you change the database schema, you must increment the database version.
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "Addresses.db";
+    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_NAME = "Addresses.db";
 
-    public AddressesDbHelper(Context context) {
+    AddressesDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

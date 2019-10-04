@@ -1,11 +1,11 @@
 package com.addresses.app.main;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.addresses.R;
@@ -15,18 +15,16 @@ import java.util.List;
 
 public class AddressRecyclerViewAdapter extends RecyclerView.Adapter<AddressRecyclerViewAdapter.ViewHolder> {
 
-    private Context context;
-
-    private List<Address> addressList;
+    private List addressList;
 
     private MainActivity.AddressListRecyclerViewOnItemClickListener addressListRecyclerViewOnItemClickListener;
 
-    public AddressRecyclerViewAdapter(Context context, List addressList, MainActivity.AddressListRecyclerViewOnItemClickListener addressListRecyclerViewOnItemClickListener) {
-        this.context = context;
+    AddressRecyclerViewAdapter(List addressList, MainActivity.AddressListRecyclerViewOnItemClickListener addressListRecyclerViewOnItemClickListener) {
         this.addressList = addressList;
         this.addressListRecyclerViewOnItemClickListener = addressListRecyclerViewOnItemClickListener;
     }
 
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -39,7 +37,7 @@ public class AddressRecyclerViewAdapter extends RecyclerView.Adapter<AddressRecy
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
 
-        Address address = addressList.get(position);
+        Address address = (Address) addressList.get(position);
 
         // Populate user interface
         viewHolder.locationNameTextView.setText(address.getLocationNameString());

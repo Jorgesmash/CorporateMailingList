@@ -94,7 +94,7 @@ public class AddressesDbManager {
 
     public static List<Address> getAllData() {
 
-        List<Address> addressList = new ArrayList<Address>();
+        List<Address> addressList = new ArrayList<>();
 
         String queryString = "SELECT * FROM " + TABLE_NAME;
 
@@ -127,6 +127,7 @@ public class AddressesDbManager {
 
             addressList.add(address);
         }
+        cursor.close();
 
         return addressList;
     }
