@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "824187589",
+    "firebase_url": "https://corporatemailinglist.firebaseio.com",
+    "project_id": "corporatemailinglist",
+    "storage_bucket": "corporatemailinglist.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824187589:android:893caef75377388948aeac",
+        "android_client_info": {
+          "package_name": "com.corporatemailinglist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824187589-odsnssv7nj2mp5las1jpf3e52tk6etat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz1uVp4IurBGYZxrszXMIicY5QXinEgjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824187589-odsnssv7nj2mp5las1jpf3e52tk6etat.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
