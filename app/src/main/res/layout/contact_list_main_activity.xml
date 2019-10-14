@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.addresses.app.main.MainActivity">
+    tools:context="com.corporatemailinglist.screens.contactlistmain.ContactListMainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -20,16 +20,33 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/main_content" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contactListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/weeklyWeatherBackgroundColor"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.corporatemailinglist.screens.contactlistmain.ContactListMainActivity"
+        tools:showIn="@layout/contact_list_main_activity"/>
 
     <TextView
         android:id="@+id/emptyTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="No\nAddresses"
+        android:text="No\nContacts"
         android:textSize="50sp"
         android:textColor="@android:color/darker_gray"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/sendBulkDataFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="@dimen/floatingActionButton_margin"
+        android:src="@drawable/ic_publish_white"
+        app:backgroundTint="@color/colorAccent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addFloatingButton"
